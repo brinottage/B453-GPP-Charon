@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      red_boxTick_0: 3765187070604641402
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      red_sliderRight_0: -4014014883109840322
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      green_sliderDown_0: 281880081378850668
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
