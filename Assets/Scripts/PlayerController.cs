@@ -6,7 +6,8 @@ public class PlayerController : MonoBehaviour
 
     private const float MAXFALL = 10.5f;
     private const float MAXSPEED = 3.8f;
-    [SerializeField] private float JUMPFORCE = 2.5f;
+    [SerializeField] private float JUMPFORCE = 7f;
+    //Jumpforce assumes mass of 1 and gravity scale of 1 for player object
     private const float ACCEL = 2.5f;
     private bool canJump = true;
 
@@ -45,6 +46,7 @@ public class PlayerController : MonoBehaviour
         }
         if (IsOnFloor() && Input.GetButton("Jump") && canJump)
         {
+            rb.linearVelocityY = 0;
             rb.AddForce(JUMPFORCE * Vector2.up, ForceMode2D.Impulse);
         }
 
@@ -59,7 +61,7 @@ public class PlayerController : MonoBehaviour
     private bool IsOnFloor()
     {
         RaycastHit2D hit;
-        hit = Physics2D.Raycast(transform.position, Vector2.down, 0.5f);
+        hit = Physics2D.Raycast(transform.position, Vector2.down, 0.6f);
         return hit;
     }
 
