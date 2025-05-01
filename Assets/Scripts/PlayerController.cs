@@ -38,18 +38,13 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxis("Horizontal") > 0)
         {
             movement.x = ACCEL;
-            //Play run animation
-            //Set cat sprite to face right
         }
         else if (Input.GetAxis("Horizontal") < 0)
         {
             movement.x = -ACCEL;
-            //Play run animation
-            //Set cat sprite to face left
         }
         else
         {
-            //Play standing animation
             movement.x = Mathf.Lerp(movement.x, 0, 0.8f);
         }
         if (IsOnFloor() && Input.GetButton("Jump") && canJump)
@@ -69,7 +64,7 @@ public class PlayerController : MonoBehaviour
     private bool IsOnFloor()
     {
         RaycastHit2D hit;
-        hit = Physics2D.Raycast(transform.position, Vector2.down, 0.4f);
+        hit = Physics2D.Raycast(transform.position, Vector2.down, 0.6f);
         return hit;
     }
 
@@ -108,7 +103,7 @@ public class PlayerController : MonoBehaviour
         {
             spriteRenderer.flipX = false;
         }
-        if (movement.magnitude == 0.0f)
+        if (movement.magnitude <= 0.01f)
         {
             ChangeAnimation(IDLE);
         }
